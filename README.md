@@ -21,7 +21,18 @@ having count(id) > 1
 The result:
 ![](images/duplicated.png)
 
-There are 171 duplicated records in total. These rows must be filtered before analyzing anything. Let's discuss it in the next section.
+We can see that the id values ​​are repeated twice. It is strange because the id column must be unique. So let's check all the remaining columns to see if there are any duplicates by this code:
+```sql
+SELECT *
+FROM product_emissions
+WHERE id = '10056-1-2014' # I will test with the first id in the above result first
+```
+| id           | company_id | country_id | industry_group_id | year | product_name             | weight_kg | carbon_footprint_pcf | upstream_percent_total_pcf | operations_percent_total_pcf | downstream_percent_total_pcf | 
+| -----------: | ---------: | ---------: | ----------------: | ---: | -----------------------: | --------: | -------------------: | -------------------------: | ---------------------------: | ---------------------------: | 
+| 10056-1-2014 | 82         | 28         | 2                 | 2014 | Frosted Flakes(R) Cereal | 0.7485    | 2                    | 57.50                      | 30.00                        | 12.50                        | 
+| 10056-1-2014 | 82         | 28         | 2                 | 2014 | Frosted Flakes(R) Cereal | 0.7485    | 2                    | 57.50                      | 30.00                        | 12.50                        | 
+
+We can see that these records are identical, we can do the same check with the remaining duplicate ids, the result still gives completely duplicate records like that. Thus, if we do not filter them before calculating, the result would be nonsense.
 
 ## 4. Finding insights
 ### 1. Which product emits the most carbon ?
