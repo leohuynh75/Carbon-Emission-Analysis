@@ -75,3 +75,20 @@ ORDER BY sum_carbon DESC
 LIMIT 1
 ```
 ![](images/top_1_company.png)
+
+### 5. The countries with the highest contribution to carbon emissions
+```sql
+SELECT c.country_name, sum(a.carbon_footprint_pcf) as sum_carbon
+FROM (
+  		SELECT DISTINCT country_id, carbon_footprint_pcf
+  		FROM product_emissions
+  ) AS a
+LEFT JOIN countries c on a.country_id = c.id
+GROUP BY c.country_name
+ORDER BY sum_carbon DESC
+LIMIT 1
+```
+![](images/top_1_country.png)
+
+### 6. The trend of carbon footprints (PCFs) over the years
+```sql
