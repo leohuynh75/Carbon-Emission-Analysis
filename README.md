@@ -80,7 +80,7 @@ LIMIT 1
 ```sql
 SELECT c.country_name, sum(a.carbon_footprint_pcf) as sum_carbon
 FROM (
-  		SELECT DISTINCT country_id, carbon_footprint_pcf
+  		SELECT DISTINCT *
   		FROM product_emissions
   ) AS a
 LEFT JOIN countries c on a.country_id = c.id
