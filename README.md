@@ -11,7 +11,7 @@ The dataset is compiled from publicly available data from nature.com and encompa
 The dataset has four tables containing information of carbon emission released during the the companies production.
 
 ## 3. Methodology
-Before analyzing, I must check the dataset first. Duplicate entries are identified using a COUNT(1) > 1 query in SQL. This approach groups records by key identifiers to check for rows with the same values, which could distort the accuracy of carbon emission calculations.
+I used **SQL** to query the information needed for analysis purposes throughout this project. But before analyzing, I must check the dataset first. Duplicate entries are identified using a COUNT(id) > 1 query in SQL. This approach groups records by key identifiers to check for rows with the same values, which could distort the accuracy of carbon emission calculations.
 ```sql
 SELECT id, count(id) as Freq
 FROM product_emissions
