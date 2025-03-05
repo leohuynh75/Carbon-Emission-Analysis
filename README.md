@@ -116,4 +116,37 @@ ORDER BY year
 ```
 ![](images/trend.png)
 
-In general, carbon emissions have been increasing year by year since **2013** and peaked at **1612760** in **2016**. But then dropped dramatically to **228531** in **2017**. This shows that people have become more aware of the harmful effects that CO2 emissions have brought, such as climate change, air pollution, melting ice at the two poles causing rising sea levels...
+In general, carbon emissions have been increasing year by year since **2013** and peaked at **1612760** in **2016**. But then dropped dramatically to **228531** in **2017**. This shows that people have become more aware of the harmful effects that CO2 emissions have brought, such as climate change, air pollution, melting ice at the two poles causing rising sea levels, etc. 
+
+## 5. Actionable insights
+There are top 5 industries with the highest of CO2 emissions into the environment:
+| industry_group                     | sum_carbon | 
+| ---------------------------------: | ---------: | 
+| Electrical Equipment and Machinery | 9801558    | 
+| Automobiles & Components           | 2582264    | 
+| Materials                          | 430199     | 
+| Technology Hardware & Equipment    | 278650     | 
+| Capital Goods                      | 258633     | 
+
+I will focus on each industry to give some actionable insights:
+- Electrical Equiment and Machinery:
+  - Encourage businesses to switch to use renewable energy in production.
+  - Increase energy efficiency of machinery, apply energy-saving technology.
+  - Issue policies to support research and application green technology in the production of electrical equiment.
+- Automobile & Components:
+  - Boosting the production and use of electric vehicles to replace gasoline-powered vehicles.
+  - Apply carbon tax policies to high-emission vehicles.
+  - Strengthen the development of green public transport system such as electric buses and electric trains.
+- Materials:
+  - Use environmentally friendly materials in construction, such as green concrete and recycled steel.
+  - Develop production technologies that reduce CO2 emissions, such as using renewable energy in smelters.
+  - Recycle building materials to reduce the demand for new production.
+- Technology Hardward & Equipment:
+  - Design low-energy technology equipment, optimize performance.
+  - Encourage recycling of electronic components, reduce exploitation of natural resources.
+  - Use eco-friendly materials in component production.
+- Capital Goods:
+  - Require businesses to report CO2 emissions from manufacturing machinery.
+  - Provide tax incentives for businesses to switch to cleaner production technologies.
+  - Encourage the use of robots and automation to reduce energy waste in manufacturing.
+
