@@ -95,3 +95,14 @@ LIMIT 1
 
 ### 6. The trend of carbon footprints (PCFs) over the years
 ```sql
+SELECT year, sum(carbon_footprint_pcf) as sum_carbon
+FROM (
+  		SELECT DISTINCT *
+  		FROM product_emissions
+  ) AS clean_data
+GROUP BY year
+ORDER BY year
+```
+![](images/trend.png)
+
+In general, carbon emissions have been increasing year by year since **2013** and peaked at **1612760** in **2016**. But then dropped dramatically to **228531** in **2017**. This shows that people have become more aware of the harmful effects that CO2 emissions have brought, such as climate change, air pollution, melting ice at the two poles causing rising sea levels...
