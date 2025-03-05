@@ -52,7 +52,7 @@ WHERE product_name = 'Wind Turbine G128 5 Megawats'
 ```sql
 SELECT i.industry_group, sum(c.carbon_footprint_pcf) as sum_carbon
 FROM (
-  		SELECT DISTINCT id, industry_group_id, carbon_footprint_pcf
+  		SELECT DISTINCT *
   		FROM product_emissions
   ) AS c # Use subquery to filter the duplicated records first
 LEFT JOIN industry_groups i on c.industry_group_id = i.id
@@ -66,7 +66,7 @@ LIMIT 1
 ```sql
 SELECT c.company_name, sum(a.carbon_footprint_pcf) as sum_carbon
 FROM (
-  		SELECT DISTINCT company_id, carbon_footprint_pcf
+  		SELECT DISTINCT *
   		FROM product_emissions
   ) AS a
 LEFT JOIN companies c on a.company_id = c.id
