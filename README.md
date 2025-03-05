@@ -41,8 +41,11 @@ In this code, I used subquery to filter the duplications before calculating the 
 
 ### 2. Which industry group does carbon-intensive products belong to ?
 ```sql
-SELECT distinct p.id, i.industry_group, p.product_name
-FROM product_emissions p
+SELECT i.industry_group, p.product_name
+FROM (
+  		SELECT DISTINCT *
+  		FROM product_emissions
+  ) AS p
 LEFT JOIN industry_groups i on p.industry_group_id = i.id
 WHERE product_name = 'Wind Turbine G128 5 Megawats'
 ```
